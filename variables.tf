@@ -3,11 +3,11 @@ variable "project" {
 }
 
 variable "region" {
-  default = "europe-west2"
+  default = "us-central1"
 }
 
 variable "zone" {
-  default = "europe-west2-c"
+  default = "	us-central1-b"
 }
 
 variable "instance_name" {
