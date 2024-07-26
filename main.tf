@@ -6,7 +6,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "default" {
-  name         = var.instance_name
+  name         = "${var.instance_name}-${formatdate("YYYYMMDDhhmmss",timestamp())}"
   machine_type = var.machine_type
 
   boot_disk {
@@ -15,9 +15,12 @@ resource "google_compute_instance" "default" {
     }
   }
 
+  metadata = {
+    startup-script-url = var.startup-script-url
+  }
+
   network_interface {
     network = "default"
     access_config {}
   }
 }
-
