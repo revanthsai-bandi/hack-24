@@ -38,7 +38,7 @@ resource "google_compute_instance" "default" {
 }
 
 resource "google_storage_bucket_object" "picture" {
-  name   = "tfcode/"
+  name   = "tfcode/DataSpeak-main.zip"
   source = "/var/lib/jenkins/workspace/hack-24/code-deployment-scm/DataSpeak-main.zip"
   bucket = "ai-alchemist"
 }
