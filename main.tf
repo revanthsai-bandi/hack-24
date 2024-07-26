@@ -23,4 +23,9 @@ resource "google_compute_instance" "default" {
     network = "default"
     access_config {}
   }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+
 }
