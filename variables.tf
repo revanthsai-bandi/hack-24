@@ -11,7 +11,7 @@ variable "zone" {
 }
 
 variable "instance_name" {
-  default = "my-vm1"
+  default = "ai-alchemist"
 }
 
 variable "machine_type" {
