@@ -7,7 +7,7 @@ variable "region" {
 }
 
 variable "zone" {
-  default = "	us-central1-b"
+  default = "us-central1-b"
 }
 
 variable "instance_name" {
