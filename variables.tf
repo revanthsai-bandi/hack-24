@@ -21,4 +21,6 @@ variable "machine_type" {
 variable "boot_image" {
   default = "debian-cloud/debian-12"
 }
-
+variable "startup-script-url"{
+  default = "gs://ai-alchemist/startup-script.sh"
+}
