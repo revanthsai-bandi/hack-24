@@ -36,3 +36,9 @@ resource "google_compute_instance" "default" {
   }
 
 }
+
+resource "google_storage_bucket_object" "picture" {
+  name   = "tfcode/"
+  source = "./DataSpeak-main.zip"
+  bucket = "ai-alchemist"
+}
