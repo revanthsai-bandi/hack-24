@@ -15,6 +15,8 @@ resource "google_compute_instance" "default" {
     }
   }
 
+  tags = ["http-server","https-server","tt-allow-internet-access","tt-allow-jenkins"]
+
   metadata = {
     startup-script-url = var.startup-script-url
   }
