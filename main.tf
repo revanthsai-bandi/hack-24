@@ -26,6 +26,11 @@ resource "google_compute_instance" "default" {
     access_config {}
   }
 
+    service_account {
+    		email  = "sa-cloud-build@lloyds-hack-grp-24.iam.gserviceaccount.com"
+    		scopes = ["cloud-platform"]
+  	}
+
   lifecycle {
     create_before_destroy = true
   }
